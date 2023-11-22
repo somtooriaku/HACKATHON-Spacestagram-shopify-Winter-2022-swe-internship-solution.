@@ -1,0 +1,201 @@
+:root {
+    --base00: rgb(57, 41, 198);
+    --base01: #2a273f;
+    --base02: #393552;
+    --base03: #306ab0;
+    --base04: #736aa5;
+    --base05: #e0def4;
+    --base06: #d9d7e1;
+    --base07: #f5f5f7;
+    --base08: #eb6f92;
+    --base09: #ea9a97;
+    --base0A: #f6c177;
+    --base0B: #cbf2b8;
+    --base0C: #3e8fb0;
+    --base0D: #9ccfd8;
+    --base0E: #c4a7e7;
+    --base0F: #b9bbbc;
+
+    color-scheme: dark;
+    scrollbar-color: var(--base03) var(--base00);
+}
+
+.App {
+    text-align: center;
+}
+
+header {
+    background-color: var(--base00);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--base07);
+    padding-left: 5%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 5%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--base04);
+}
+
+.content {
+    padding: 1em;
+    background-color: var(--base00);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo {
+    font-size: 2em;
+    padding: 0;
+}
+
+.cards {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 1em 0;
+}
+
+@media(max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    padding: 0;
+
+    background-color: var(--base01);
+    border-radius: 12px;
+    color: var(--base07);
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* font-size: 3rem; */
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 6, 20, 0.1) 0px, 0.075rem, 0.157rem;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* border-radius: 8px; */
+    /* transition: all 500ms; */
+    /* overflow: hidden; */
+}
+
+.card-container {
+    padding: 1em;
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card .copyright {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    margin: 0;
+    text-align: left;
+    height: auto;
+}
+
+.buttons {
+    margin-top: 0.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.button {
+    color: var(--base07);
+    font-weight: bold;
+    font-size: 14px;
+    background-color: var(--base02);
+    border: none;
+    border-radius: 4px;
+    transition: all ease-in-out 175ms;
+    cursor: pointer;
+
+    padding: 0.8em;
+    width: 100%;
+}
+
+.liked {
+    background-color: var(--base08);
+    color: var(--base00);
+}
+
+@media (hover:hover) {
+    .button:hover {
+        background-color: var(--base09);
+        color: var(--base00);
+    }
+    .liked:hover {
+        background-color: var(--base08);
+        color: var(--base00);
+    }
+}
+
+.spinner-container {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    top: 0;
+    position: fixed;
+    place-items: center;
+    z-index: 9;
+    width: 90%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.video-responsive iframe {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.icon {
+    font-size: 3em;
+    line-height: 0;
+    color: var(--base07);
+    text-decoration: none;
+
+    transition: all ease-in-out 175ms;
+}
+
+.icon:link, .icon:visited {
+    color: var(--base07);
+}
+
+@media (hover:hover) {
+    .icon:hover {
+        color: var(--base09);
+    }
+}
